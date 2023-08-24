@@ -1,6 +1,6 @@
 import Cabecalho from 'components/Cabecalho'
 import Container from 'components/Container'
-import Favoritos from 'pages/Inicio/Favoritos'
+import Favoritos from 'pages/Favoritos'
 import Rodape from 'components/Rodape'
 import Inicio from 'pages/Inicio'
 import React from 'react'
