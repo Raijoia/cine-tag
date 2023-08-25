@@ -5,16 +5,19 @@ import Rodape from 'components/Rodape'
 import Inicio from 'pages/Inicio'
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import FavoritosProvider from 'context/Favoritos'
 
 export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Cabecalho />
         <Container>
-          <Routes>
-            <Route path='/' element={<Inicio />}></Route>
-            <Route path='/favoritos' element={<Favoritos />}></Route>
-          </Routes>
+          <FavoritosProvider>
+            <Routes>
+              <Route path='/' element={<Inicio />}></Route>
+              <Route path='/favoritos' element={<Favoritos />}></Route>
+            </Routes>
+          </FavoritosProvider>
         </Container>
       <Rodape />
     </BrowserRouter>
